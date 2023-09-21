@@ -1,0 +1,129 @@
+form {
+    width: 600px;
+}
+
+
+
+.hoverText:hover {
+    color: rgb(126, 119, 175)
+}
+
+.msgError {
+    color: rgb(134, 200, 80);
+    font-size: large;
+}
+
+#contentForm {
+    padding: 15px;
+}
+
+.mainHeader {
+    text-align: center;
+    padding-top: 10px;
+}
+
+
+/* --------------------------------------------------------------------------- */
+/* grid and flex */
+#container {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 0.35fr auto 0.1fr;
+    grid-template-areas:
+        "h h h h h h h h h h h h"
+        "c c c c c c c c c c c c"
+        "c1 c1 c1 c1 c1 c1 c1 c1 c1 c1 c1 c1"
+        "f f f f f f f f f f f f";
+    /* border: 1px solid #000; */
+    font-family: myFont;
+}
+
+#header {
+    grid-area: h;
+}
+
+#contentForm {
+    grid-area: c;
+}
+
+#contentTable {
+    grid-area: c1;
+    height: 100%;
+
+}
+
+#footer {
+    grid-area: f;
+    font-size: x-large;
+}
+
+
+#contentForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+#contentTable {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* big screen */
+@media screen and (min-width: 992px) {
+    #container {
+        display: grid;
+        min-height: 100%;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+            "h h h h h h h h h h h h"
+            "c c c c c c c c c c c c"
+            "c1 c1 c1 c1 c1 c1 c1 c1 c1 c1 c1 c1"
+            "f f f f f f f f f f f f";
+    }
+
+    #myTable {
+        width: 800px;
+        font-size: large
+    }
+
+}
+
+
+/* Small screen */
+@media screen and (min-width: 250px) {
+    #container {
+        display: grid;
+        min-height: 100%;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+            "h h h h h h h h h h h h"
+            "c c c c c c c c c c c c"
+            "c1 c1 c1 c1 c1 c1 c1 c1 c1 c1 c1 c1"
+            "f f f f f f f f f f f f";
+    }
+}
+
+
+/* fonts.. */
+@font-face {
+    font-family: spanFont;
+    src: url(./assets/fonts/Scary\ Zombie.ttf);
+}
+
+@font-face {
+    font-family: headerFont;
+    src: url(./assets/fonts/Scary\ Zombie.ttf);
+}
+
+@font-face {
+    font-family: myFont;
+    src: url(./assets/fonts/MetalRocker.ttf);
+}
